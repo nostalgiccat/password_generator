@@ -4,12 +4,12 @@ from tkinter import *
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
-    website_content = website_entry.get()
-    email_content = email_entry.get()
-    password_content = password_entry.get()
+    website = website_entry.get()
+    email = email_entry.get()
+    password = password_entry.get()
 
     with open("data.txt", "a") as file:
-        file.write(f"\n Website: {website_content} | Email: {email_content} | Password: {password_content}")
+        file.write(f"\n Website: {website} | Email: {email} | Password: {password}")
 
     website_entry.delete(0, "end")
     password_entry.delete(0, "end")
